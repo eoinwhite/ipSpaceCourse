@@ -10,7 +10,7 @@ I then tried to build an Arista topology but again I could not get the MGMT inte
 
 # Network Diagram
 A very simple topology. I will elaborate on this in the future, but for now I need to catch up on the course material.
-https://raw.githubusercontent.com/eoinwhite/ipSpaceCourse/master/images/NetworkDiagram.PNG
+![alt text](https://raw.githubusercontent.com/eoinwhite/ipSpaceCourse/master/images/NetworkDiagram.PNG "Network Diagram")
 
 # Ansible
 I've created an inventory file and used the raw module to run commands on my lab.
