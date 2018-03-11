@@ -7,3 +7,7 @@ l2
 [routers]
 r1
 r2
+
+[all:vars]
+ansible_user=eoin
+ansible_ssh_pass=eoin
