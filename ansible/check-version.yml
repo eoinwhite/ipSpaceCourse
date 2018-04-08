@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  tasks:
+  - file: path=version_report.txt state=absent
+  - file: path=version_report.txt state=touch
+
+- hosts: ios
+  serial: 1
+  tasks:
+  - ios_command:
+      commands: show version
+    register: result
+
+  - lineinfile: 
+      dest:   version_report.txt 
+      regexp: "{{inventory_hostname}}"
+      line:   "{{inventory_hostname}}: IOS version mismatch"
+    when: "not ('Version {{version}}' in result.stdout[0])"
+
+  - lineinfile:
+      dest:   version_report.txt
+      regexp: "{{inventory_hostname}}"
+
+      line:   "{{inventory_hostname}}: Success IOS version match"
+    when: " ('Version {{version}}' in result.stdout[0])"

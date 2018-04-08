@@ -1,0 +1,5 @@
+---
+ansible_user: eoin 
+ansible_ssh_pass: eoin
+snmp_community: cisco
+snmp_contact: admin@lab.local

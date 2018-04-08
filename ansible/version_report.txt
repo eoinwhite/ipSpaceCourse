@@ -1,0 +1,6 @@
+s1: Success IOS version match
+s2: Success IOS version match
+l1: Success IOS version match
+l2: Success IOS version match
+r1: IOS version mismatch
+r2: Success IOS version match
